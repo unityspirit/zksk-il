@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>דוגמת אתר — תבנית לעסק שלך</title>
+  <meta name="description" content="דוגמה קולנועי אתר.">
+  <meta property="og:title" content="דוגמת אתר — תבנית לעסק שלך">
+  <meta property="og:description" content="דוגמה קולנועי אתר.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Loader is created dynamically by app.js with progress bar -->
+
+  <!-- CANVAS -->
+  <canvas id="scrollCanvas"></canvas>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="logo">
+        <img src="logo-nav.png" alt="החברה שלך" class="logo-img">
+      </a>
+      <nav class="desktop-nav">
+        <a class="nav-link" data-page="0">ראשי</a>
+        <a class="nav-link" data-page="1">עלינו</a>
+        <a class="nav-link" data-page="2">כיוונים</a>
+        <a class="nav-link" data-page="3">תיק עבודות</a>
+        <a class="nav-link" data-page="4">יתרונות</a>
+        <a class="nav-link" data-page="5">גיאוגרפיה</a>
+        <a class="nav-link" data-page="6">צור קשר</a>
+      </nav>
+      <a href="#contacts" class="header-cta">כפתור מותאם</a>
+      <button class="burger" id="burger" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <a class="nav-link" data-page="0">ראשי</a>
+      <a class="nav-link" data-page="1">עלינו</a>
+      <a class="nav-link" data-page="2">כיוונים</a>
+      <a class="nav-link" data-page="3">תיק עבודות</a>
+      <a class="nav-link" data-page="4">יתרונות</a>
+      <a class="nav-link" data-page="5">גיאוגרפיה</a>
+      <a class="nav-link" data-page="6">צור קשר</a>
+    </nav>
+  </header>
+
+  <!-- SCROLL INDICATOR -->
+  <div class="scroll-indicator" id="scroll-indicator">
+    <div class="scroll-arrow"></div>
+    <span class="scroll-text">Скролл</span>
+  </div>
+
+  <!-- UI LAYER -->
+  <div id="ui-layer">
+
+    <!-- PAGE 0: HERO -->
+    <section class="page is-active" id="page-0">
+      <div class="page-inner hero-content">
+        <img src="logo-full.png" alt="החברה שלך" class="hero-logo">
+        <div class="hero-title">
+          <span class="hero-line1">כאן יהיה שם<br>החברה שלך</span>
+          <span class="hero-line2">שלך מותג &bull; הנישה שלך &bull; שלךЕ НАПРАВЛЕНИЕ</span>
+        </div>
+        <p class="hero-sub">כאן אתה יכול לכתוב את הסלוגן שלך, תיאור קצר או הצעה חמה — כל מה שתרצה!</p>
+        <div class="hero-buttons">
+          <a href="#contacts" class="btn btn-primary">כפתור מותאם</a>
+          <a href="#" class="btn btn-outline" data-page="2">הקישורים שלך</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">15+</span><span class="stat-label">שנות ניסיון</span></div>
+          <div class="stat"><span class="stat-num">120+</span><span class="stat-label">אובייקטов</span></div>
+          <div class="stat"><span class="stat-num">500K</span><span class="stat-label">м² построено</span></div>
+          <div class="stat"><span class="stat-num">50+</span><span class="stat-label">מומחים</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 1: О החברה -->
+    <section class="page" id="page-1">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">עלינו</span>
+          <h2 class="section-title">Надёжный пארטнёр<br>в בנייה</h2>
+          <p class="section-sub">ספרו о שלה החברה בקצרה — כדי לקוח גילה о Вас טוב יותרе</p>
+        </div>
+        <div class="about-layout">
+          <div>
+            <p class="about-lead">לדוגמה<br>Мы — חברה מלא מחזור, מבצעת בנייה и שחזור אובייקטов נדל"ן אפילו על ירח!</p>
+            <p class="about-text">שלנוа הצוות משלב עמוק ידע האזורльной ייחוד с מודרניים בנייה טכנולוגיות. אנחנו עבודותаем с אובייקטами פעמיםאישית מורכבות — מ מגורים ביתов עד היסטוריים אנדרטאות אדריכלות, הדורשים עדין גישהа к שחזור.</p>
+          </div>
+          <div class="about-cards">
+            <div class="card">
+              <div class="card-icon">🏗️</div>
+              <h3>מחזור מלא</h3>
+              <p>От פרויקטирования עד כניסה в שימוש</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">📐</div>
+              <h3>תכנון</h3>
+              <p>Собственное אדריכלי משרד</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">🔧</div>
+              <h3>עצמאית טכניקה</h3>
+              <p>פארק בנייה טכניקות и ציוד</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">✅</div>
+              <h3>אחריות</h3>
+              <p>אחריות обслужיצחקие כל אובייקטа</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: כיוונים -->
+    <section class="page" id="page-2">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">השירותים שלך</span>
+          <h2 class="section-title">Что אנחנו בונים</h2>
+          <p class="section-sub">ארבעה מרכזיים כיוונים, в אותם אנחנו צברנו ייחודית מומחיות</p>
+        </div>
+        <div class="directions-grid">
+          <div class="card direction-card">
+            <div class="card-icon">🏔️</div>
+            <h3>נופש בנייה</h3>
+            <p>מלונאים מתחמים, ספא, SPA-מרכזים и אובייקטы נופש תשתית. בונים с учётом горного рельефа и אקלימיים מאפיינים האזור.</p>
+          </div>
+          <div class="card direction-card">
+            <div class="card-icon">🏢</div>
+            <h3>Жилые מתחמים</h3>
+            <p>Многоквארטирные בתים, таунхаусы и коттеджные посёлки. Современные планировки, энергоэффективные טכנולוגיות и качественные חומרים.</p>
+          </div>
+          <div class="card direction-card">
+            <div class="card-icon">🏛️</div>
+            <h3>שחזור אובייקטов</h3>
+            <p>Восстановление היסטוריים зданий и אנדרטאות אדריכלות. זהיר גישה к культурному наследию с применением אותנטיים חומרים и методов.</p>
+          </div>
+          <div class="card direction-card">
+            <div class="card-icon">🛣️</div>
+            <h3>Инфраструктура</h3>
+            <p>Дорожное בנייה, инженерные сети, פיתוח территорий. Создаём комфортную среду עבור жителей и гостей נופשов.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: ГАЛЕРЕЯ -->
+    <section class="page gallery-page" id="page-3">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">כאן יכולים להיות דוגמאות לעבודות שלך</span>
+          <h2 class="section-title">שלנוи אובייקטы</h2>
+          <p class="section-sub">Добавьте שלהם הטובים ביותר фото, כדי показать товар лицом!</p>
+        </div>
+        <div class="carousel-container" id="carousel-container">
+          <button class="carousel-arrow carousel-arrow-left" id="carousel-prev" aria-label="Назад">‹</button>
+          <div class="carousel-track" id="carousel-track">
+            <div class="carousel-card" data-index="0"><img src="gallery/photo_01.webp" alt="אובייקט 1"></div>
+            <div class="carousel-card" data-index="1"><img src="gallery/photo_02.webp" alt="אובייקט 2"></div>
+            <div class="carousel-card" data-index="2"><img src="gallery/photo_03.webp" alt="אובייקט 3"></div>
+            <div class="carousel-card" data-index="3"><img src="gallery/photo_04.webp" alt="אובייקט 4"></div>
+            <div class="carousel-card" data-index="4"><img src="gallery/photo_05.webp" alt="אובייקט 5"></div>
+            <div class="carousel-card" data-index="5"><img src="gallery/photo_06.webp" alt="אובייקט 6"></div>
+            <div class="carousel-card" data-index="6"><img src="gallery/photo_07.webp" alt="אובייקט 7"></div>
+            <div class="carousel-card" data-index="7"><img src="gallery/photo_08.webp" alt="אובייקט 8"></div>
+            <div class="carousel-card" data-index="8"><img src="gallery/photo_09.webp" alt="אובייקט 9"></div>
+            <div class="carousel-card" data-index="9"><img src="gallery/photo_10.webp" alt="אובייקט 10"></div>
+            <div class="carousel-card" data-index="10"><img src="gallery/photo_11.webp" alt="אובייקט 11"></div>
+            <div class="carousel-card" data-index="11"><img src="gallery/photo_12.webp" alt="אובייקט 12"></div>
+            <div class="carousel-card" data-index="12"><img src="gallery/photo_13.webp" alt="אובייקט 13"></div>
+            <div class="carousel-card" data-index="13"><img src="gallery/photo_14.webp" alt="אובייקט 14"></div>
+            <div class="carousel-card" data-index="14"><img src="gallery/photo_15.webp" alt="אובייקט 15"></div>
+            <div class="carousel-card" data-index="15"><img src="gallery/photo_16.webp" alt="אובייקט 16"></div>
+            <div class="carousel-card" data-index="16"><img src="gallery/photo_17.webp" alt="אובייקט 17"></div>
+            <div class="carousel-card" data-index="17"><img src="gallery/photo_18.webp" alt="אובייקט 18"></div>
+            <div class="carousel-card" data-index="18"><img src="gallery/photo_19.webp" alt="אובייקט 19"></div>
+            <div class="carousel-card" data-index="19"><img src="gallery/photo_20.webp" alt="אובייקט 20"></div>
+          </div>
+          <button class="carousel-arrow carousel-arrow-right" id="carousel-next" aria-label="Вперёд">›</button>
+        </div>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: ПРЕИМУЩЕСТВА -->
+    <section class="page" id="page-4">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">יתרונות</span>
+          <h2 class="section-title">Перечислите שלהם הטובים ביותר איכות</h2>
+          <p class="section-sub">שלנו גישה к кажביתу פרויקטу основан על принципах איכות, надёжности и прозрачности</p>
+        </div>
+        <div class="advantages-grid">
+          <div class="card">
+            <div class="advantage-num">01</div>
+            <h3>Собственная טכניקה</h3>
+            <p>מלא פארק בנייה טכניקות — מ экскаваторов עד מגדליים кранов. Не зависим מ субקבלנים.</p>
+          </div>
+          <div class="card">
+            <div class="advantage-num">02</div>
+            <h3>Квалифицированные кадры</h3>
+            <p>Штат מ 50+ מומחים с ניסיוןом עבודה в горных и נופשных תנאיםх. Регулярное повышение квалификации.</p>
+          </div>
+          <div class="card">
+            <div class="advantage-num">03</div>
+            <h3>אחריות איכות</h3>
+            <p>Трёхступенчатый בקרת איכות על כל שלב. Применяем מוסמכים חומרים ведущих производителей.</p>
+          </div>
+          <div class="card">
+            <div class="advantage-num">04</div>
+            <h3>Соблюдение מועדов</h3>
+            <p>98% פרויקטов сданы воזמן. Детальное планирование и прозрачная отчётность על כל שלב строительства.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: גיאוגרפיה -->
+    <section class="page" id="page-5">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">גיאוגרפיה</span>
+          <h2 class="section-title">עבודותаем לפי כלй ГАЛАКТИКЕ!</h2>
+          <p class="section-sub">שלנוи אובייקטы расположены в самых живописных и востребованных реальностях и проמדינותствах שלנושלו мира</p>
+        </div>
+        <div class="geo-layout">
+          <div>
+            <p class="geo-text">Мы עבודותаем во כלх מרכזיים зонах любых галактик. Знаем חודשיםтную специфику — מ מאפיינים грунтов עד אקלימיים условий כל האזור.</p>
+            <div class="geo-regions">
+              <span class="geo-tag">Марс</span>
+              <span class="geo-tag">Юпитер</span>
+              <span class="geo-tag">Сатурн</span>
+              <span class="geo-tag">אנדרומדה</span>
+              <span class="geo-tag">אוריון</span>
+              <span class="geo-tag">Кассиопея</span>
+              <span class="geo-tag">Плеяды</span>
+              <span class="geo-tag">Сириус</span>
+              <span class="geo-tag">Венера</span>
+              <span class="geo-tag">אלפא Центавра</span>
+            </div>
+          </div>
+          <div class="geo-stats">
+            <div class="card geo-stat-card">
+              <div class="geo-stat-num">9+</div>
+              <div class="geo-stat-label">אזורов присутствия</div>
+            </div>
+            <div class="card geo-stat-card">
+              <div class="geo-stat-num">120+</div>
+              <div class="geo-stat-label">Завершённых אובייקטов</div>
+            </div>
+            <div class="card geo-stat-card">
+              <div class="geo-stat-num">15+</div>
+              <div class="geo-stat-label">שנות в אזורе</div>
+            </div>
+            <div class="card geo-stat-card">
+              <div class="geo-stat-num">98%</div>
+              <div class="geo-stat-label">אובייקטов в מועד</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: איש קשרЫ -->
+    <section class="page" id="page-6">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">צור קשר</span>
+          <h2 class="section-title">נתחיל שיתוף פעולה</h2>
+          <p class="section-sub">ציין כאן את פרטי הקשר, הכתובת ורשתות חברתיות שלך כדי שלקוחות יוכלו ליצור קשר</p>
+        </div>
+        <div class="contacts-layout">
+          <div class="contact-info-card">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div class="contact-label">טלפון</div>
+                <div class="contact-value"><a href="tel:#">הטלפון שלך</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <div class="contact-label">אימייל</div>
+                <div class="contact-value"><a href="mailto:#">האימייל שלך</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-label">כתובת</div>
+                <div class="contact-value">הכתובת שלך</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <div class="contact-label">שעות עבודה</div>
+                <div class="contact-value">א׳–Пт: 9:00–18:00</div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <form class="contact-form card" id="contact-form" onsubmit="return false">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Имя</label>
+                <input type="text" id="name" placeholder="השם שלך והחברה" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">טלפון</label>
+                <input type="tel" id="phone" placeholder="+972-__-___-____" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputNiche">הנישה שלך</label>
+              <select id="inputNiche">
+                <option value="">הנישה שלך</option>
+                <option>רפואה / יופי</option>
+                <option>מסעדות / HoReCa</option>
+                <option>בנייה / שיפוצים</option>
+                <option>אדריכלות / עיצוב</option>
+                <option>IT / ייעוץ</option>
+                <option>רכב / דיטיילינג</option>
+                <option>כושר / ספורט</option>
+                <option>חינוך</option>
+                <option>תיירות / מלונות</option>
+                <option>ייצור</option>
+                <option>אחר</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inputBudget">תקציב</label>
+              <select id="inputBudget">
+                <option value="">תקציב לאתר</option>
+                <option>2,000 – 4,000 ₪</option>
+                <option>4,000 – 7,000 ₪</option>
+                <option>7,000 – 12,000 ₪</option>
+                <option>מעל 12,000 ₪</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Сообщение</label>
+              <textarea id="message" placeholder="מה אתה רוצה לקבל מהאתר? מהו האתר הנוכחי (קישור)?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;text-align:center">להזמין אתר →</button>
+          </form>
+        </div>
+        <div style="text-align:center;margin-top:32px"><a href="https://unityspirit.github.io/global-plus-il/#page-4" class="btn btn-outline" style="font-size:16px;padding:14px 40px">חזרה לעמוד הראשי</a></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2026 החברה שלך</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
